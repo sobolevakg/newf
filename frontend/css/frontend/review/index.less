@@ -1,0 +1,263 @@
+@review: b-review;
+
+.@{review} {
+
+&__modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+}
+
+&__modal-content {
+        background: #fff;
+        margin: 100px auto;
+        position: relative;
+        width: 600px;    
+        border: 1px solid @color-dark-gray; 
+        display: flow-root;
+        @media (max-width: @screen-xs-min) {
+            width: 100%;
+            position: absolute;
+            height: 95%;
+            bottom: 0;
+            margin: unset;
+            padding: unset;
+            border: none;
+        }
+        label{
+            color: #000;
+            float: left;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+}
+
+&__modal-close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+	    right: -15px;
+	    top: -30px;
+        @media (max-width: @screen-xs-min) {
+                right: 0;
+        }
+        &:hover,
+        &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+}
+
+&__modal-tabs {
+	    width: 100%;
+		float: left;
+		height: 80px;
+		border-bottom: 1px solid #acacac;
+		text-align: center;
+		font-size: 16px;
+		padding-top: 30px;
+        font-weight: bold;
+            &:hover{
+                cursor: pointer;
+            }
+            @media (max-width: @screen-xs-min) {
+                width: 100%;
+            }
+}
+
+&__border{
+  border-left: 1px solid @color-dark-gray;
+}
+
+
+&__tabs-content{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+&__сreate-account{
+    display: none;
+}
+
+&__input{
+        border: 1px solid #acacac;
+        color: #000;
+        font-size: 20px;
+        outline: medium none;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+}
+
+&__button-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        width: 100%;
+}
+
+&__button {
+        background: #c7f6c2;
+        border-radius: 20px;
+        color: #000;
+        border: none;
+        padding: 10px 40px;
+}
+
+
+&__title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+&__google{
+    background-image: url(/i/g-plus.png);
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+
+&__option {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+
+&__gray{
+    color: @color-dark-gray;
+}
+
+
+&__input-content{
+        width: 100%;
+        float: left;
+                &:first-child{
+                        margin-bottom: 20px;
+                }
+                @media (max-width: @screen-xs-min) {
+                        width: 100%;
+                        margin-top: 20px;
+                }
+}
+
+&__new_password{
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+&__option-error {
+    margin-top: 20px;
+    color: #ff0000;
+    display: none;
+}
+
+&__text-area{
+    font-size: 20px;
+    height: 100px;
+    line-height: 30px;
+    overflow: auto;
+    resize: none;
+    width: 100%;
+}
+
+&__list{
+    border: 1px solid #acacac;
+    border-bottom: none;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+&__content-review{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #acacac;
+    line-height: 20px;
+}
+
+
+&__content-user {
+    font-style: italic;
+    font-weight: bold;
+}
+
+&__content-date {
+    font-style: italic;
+    color: #acacac;
+    margin-top: 5px;
+}
+
+
+&__content-text {
+    margin-top: 20px;
+    overflow-wrap: break-word;
+}
+
+&__list-none {
+    float: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+&__answer{
+    color: @color-green;
+    margin-top: 10px;
+    background: url("/i/answer.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    span{
+        border-bottom: 1px dotted; 
+        margin-left: 35px;   
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+&__answer-content {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    background: url("/i/answer_content.png");
+    background-repeat: no-repeat;
+    background-position: 0 -32px;
+    padding-left: 20px;
+    overflow-wrap: break-word;
+}
+
+&__answer-title,
+&__answer-text{
+    color: @color-dark-gray;
+    font-style: italic;
+}
+&__answer-text{
+    margin-top: 10px;
+}
+
+&__answer-text-normal{
+    color: #000;
+}
+
+}

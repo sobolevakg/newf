@@ -1,0 +1,74 @@
+@import "../less/lesshat";
+@import "../less/reset";
+@import "admin_panel/index";
+
+@color-green: #84cf91;
+@color-gray: #d1d1d1;
+
+@cabinet: b-cabinet;
+
+.@{cabinet} {
+
+	&__inner {	   
+	    width: 100%; 
+		label{
+			width:20%;
+			float: left;
+		}
+		input{
+			width: 80%;
+			float: left;
+		}
+	}
+
+	&__table {
+	  border-collapse: collapse;
+	  color: #686461;
+      width: 100%;
+		caption {
+		  padding: 10px;
+		  color: #fff;
+		  background: @color-green;
+		  font-size: 18px;
+		  text-align: left;
+		  font-weight: bold;
+		}
+		th {
+		  border-bottom: 3px solid #B9B29F;
+		  padding: 10px;
+		  text-align: left;
+		}
+		td {
+		  	padding: 10px;
+			border-bottom: 1px solid @color-gray;			
+		}
+		tbody{
+			tr{
+				&:hover{
+					cursor: pointer;
+					background-color: @color-gray;
+				}
+			}
+		}
+		.b-gcard__check{
+			background-position: center;
+			padding: 0 0 15px 25px;
+		}
+	}
+
+	&__map{
+	    width: 100%;
+	    height: 200px;
+		float: left;
+	}
+
+&__inner input[type="checkbox"], input[type="radio"]{
+	width: 50%;
+}
+
+&__inner textarea {
+    width: 80%;
+    height: 200px;
+}
+	
+}

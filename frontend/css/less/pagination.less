@@ -1,0 +1,117 @@
+@import "../less/lesshat";
+@import "../less/vars";
+
+.b-pagination {
+  font-weight: bold;
+  height: 70px;
+  width: 865px;
+  .display(flex);
+  .align-items(center);
+  .justify-content(space-between);
+  background: white;
+  z-index: 3;
+
+  @media (max-width: 1270px) {
+    width: 100%;
+  }
+
+  ul {
+    width: 100%;
+    .display(flex);
+    .justify-content(space-between);
+  }
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    .border-radius(50px);
+    border: 1px solid @color_green;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    margin: 0 10px 0 0;
+
+    @media (max-width: @screen-md) {
+      width: 40px;
+      height: 40px;
+      .border-radius(40px);
+    }
+    @media (max-width: @screen-xs) {
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+      .border-radius(30px);
+    }
+
+    a, span {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+      display: block;
+      vertical-align: middle;
+      color: black;
+      text-decoration: none;
+      font-weight: normal;
+      .box-sizing(border-box);
+      @media (max-width: @screen-md) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      @media (max-width: @screen-xs) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    &:hover {
+      background-color: #f7f7f7;
+      .border-radius(50px);
+    }
+
+    &:first-child, &:last-child {
+      border: 0;
+      width: 80px;
+      @media (max-width: @screen-sm) {
+        display: none;
+      }
+    }
+    &:first-child {
+      a {
+        padding-left: 20px;
+        text-align: left;
+        background: url(/i/arr-left.png) no-repeat 0 center;
+      }
+      span {
+        padding-left: 20px;
+        text-align: left;
+        opacity: 0.5;
+        background: url(/i/arr-left.png) no-repeat 0 center;
+      }
+    }
+    &:last-child {
+      a {
+        text-align: right;
+        padding-right: 20px;
+        background: url(/i/arr-right.png) no-repeat right center;
+      }
+      span {
+        padding-right: 20px;
+        text-align: right;
+        opacity: 0.5;
+        background: url(/i/arr-right.png) no-repeat right center;
+      }
+    }
+    &-active {
+      background-color: @color_green;
+      color: black;
+    }
+    &.last, &.first {
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+  }
+}

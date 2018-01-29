@@ -1,0 +1,177 @@
+@auth: b-auth;
+
+.@{auth} {
+
+&__modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+}
+
+&__modal-content {
+        background: #fff;
+        margin: 100px auto;
+        position: relative;
+        width: 600px;    
+        border: 1px solid @color-dark-gray; 
+        display: flow-root;
+        @media (max-width: @screen-xs-min) {
+            width: 100%;
+            position: absolute;
+            height: 95%;
+            bottom: 0;
+            margin: unset;
+            padding: unset;
+            border: none;
+        }
+        label{
+            color: #000;
+            float: left;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+}
+
+&__modal-close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+	right: -15px;
+	top: -30px;
+        @media (max-width: @screen-xs-min) {
+                right: 0;
+        }
+        &:hover,
+        &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+}
+
+&__modal-tabs {
+	    width: 50%;
+		float: left;
+		height: 80px;
+		border-bottom: 1px solid #acacac;
+		text-align: center;
+		font-size: 16px;
+		padding-top: 30px;
+            &:hover{
+                cursor: pointer;
+            }
+            @media (max-width: @screen-xs-min) {
+                width: 100%;
+            }
+}
+
+&__border{
+  border-left: 1px solid @color-dark-gray;
+}
+
+&__modal-tabs-active{                
+           font-weight: bold;
+
+}
+
+&__sign_in,
+&__сreate-account{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+&__сreate-account{
+    display: none;
+}
+
+&__input{
+        border: 1px solid #acacac;
+        color: #000;
+        font-size: 20px;
+        outline: medium none;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+}
+
+&__button-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        width: 100%;
+}
+
+&__button {
+        background: #c7f6c2;
+        border-radius: 20px;
+        color: #000;
+        border: none;
+        padding: 10px 40px;
+}
+
+
+&__title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+&__google{
+    background-image: url(/i/g-plus.png);
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+
+&__option {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+
+&__gray{
+    color: @color-dark-gray;
+}
+
+
+&__input-content{
+        width: 47%;
+        float: left;
+                &:first-child{
+                        margin-right: 20px;
+                }
+                @media (max-width: @screen-xs-min) {
+                        width: 100%;
+                        margin-top: 20px;
+                }
+}
+
+&__new_password{
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+&__option-error {
+    margin-top: 20px;
+    color: #ff0000;
+    display: none;
+}
+
+}

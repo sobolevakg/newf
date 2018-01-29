@@ -1,0 +1,293 @@
+@color-green: #c7f6c2;
+@color-gray: #d1d1d1;
+@color-dark-gray: #acacac;
+
+@show: b-developers-show;
+
+.@{show} {
+	
+
+	&__card{
+		max-width: 980px;
+		width: 100%;
+		float: left;
+		padding-right: 30px;
+		padding-left: 60px;
+		position: relative;
+			@media (max-width: @screen-gcard-adap-width) {
+				max-width: 775px;
+			}
+			@media (max-width: @screen-xs-min) {				
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+	}
+
+	&__path{
+		width: 100%;
+		border-bottom: 1px solid @color-dark-gray;
+		height: 50px;
+		padding-left: 70px;
+		padding-right: 70px;
+		text-align: left;
+		line-height: 45px;
+		color: @color-dark-gray; 
+			@media (max-width: @screen-gcard-adap-width) {
+				display: none;
+			}
+			@media (max-width: @screen-xs-min) {
+				padding: 10px;
+				display: block;
+                                height: auto;
+                                line-height: 20px;
+			}
+	}
+
+	&__content{
+		width: 100%;
+		max-width: 1230px;
+		padding-top: 20px;
+		margin: 0 auto;		
+		.b-gcard__photos-nophoto {
+    		background-size: 130px 130px;
+		}
+		.b-listing__photos{
+			margin: 0 20px 0 0;
+			float: left;
+				@media (max-width: @screen-xs-min) {
+					    width: 100%;
+						min-width: unset;
+						max-width: 100%;
+				}
+		}
+	}
+
+	&__title{
+		width: 100%;
+		float: left;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		line-height: 30px;
+	}
+
+    &__link{
+        text-decoration: none;
+        color: #000;
+            &:hover{
+                cursor: pointer;
+                color: @color-green;
+            }
+    }
+
+	&__info{
+		float: left;
+			@media (max-width: @screen-xs-min) {
+				text-indent: unset;
+				float: left;
+				margin-top: 20px;
+			}
+	}
+
+	&__name {
+			@media (max-width: @screen-xs-min) {
+				margin-top: 10px;
+			}
+	}
+
+	
+	&__address {
+		padding-top: 20px;
+	}
+
+	&__site {
+    	margin-top: 50px;
+		        .link-green{
+                                font-size: 13px;
+                        }
+			@media (max-width: @screen-gcard-adap-width) {
+				padding-top: 15px;
+			}
+	}
+
+	&__created_year {
+    	padding-top: 10px;
+	}
+
+	&__description {
+		width: 100%;
+		float: left;
+		margin-top: 35px;
+		line-height: 20px;
+		border-bottom: 1px solid @color-dark-gray;
+		padding-bottom: 20px;
+                margin-bottom: 20px;
+                	@media (max-width: @screen-gcard-adap-width) {
+				margin-top: 0px;
+			}
+	}
+
+	&__phone{
+		    background-color: #c7f6c2;
+                    border-radius: 13px;
+                    color: black;
+                    cursor: pointer;
+                    padding: 6px 20px;
+                    position: absolute;
+                    right: 30px;
+                    text-indent: initial;
+                    top: 130px;
+			@media (max-width: @screen-gcard-adap-width) {
+				display: none;
+			}
+			@media (max-width: @screen-xs-min) {
+				position: unset;
+				margin-top: 20px;
+				width: 170px;
+				display: flex;
+                justify-content: center;
+                float: left;
+			}
+	}
+
+	&__button-review{
+         background-color: #c7f6c2;
+         border-radius: 20px;
+         color: black;
+         cursor: pointer;
+         padding: 13px 20px;
+         text-indent: initial;
+         float: right;
+         margin: 25px;
+            @media (max-width: @screen-xs-min) {
+                float: left;
+            }
+        
+	}
+
+    &__title-review{
+        width: auto;
+    }
+
+    &__review-container{
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+	&__container{
+		display: inline-block;
+		width: 100%;
+	}
+
+	&__right{
+		float: left;
+		padding-right: 10px;
+		margin-top: 40px;
+			@media (max-width: @screen-xs-min) {
+				margin: 0 auto;
+				padding-top: 40px;
+				padding-right: 10px;
+				padding-left: 10px;
+				padding-bottom: 20px;
+				float: unset;
+			}
+
+			@media (max-width: 1240px) {
+                                max-width: 225px;
+			}
+	}
+
+	&__phone-show{
+		display: none;
+	}
+
+	&__list-hc{
+		float: left;
+                width: 100%;
+	}
+
+	&__count{
+		color: @color-green;
+	}
+
+	&__link-gray{
+		text-decoration: none;
+		color: @color-dark-gray;
+	}
+
+	&__photo{
+		margin-right: 20px;
+	}
+
+	&__button-prev {
+		background-color: @color-green;
+		position: fixed;
+		border-radius: 25px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		left: 10px;
+		top: 230px;
+		background-image: url(/i/back.png);
+		background-position: center;
+			div {
+				opacity: 0;
+				padding-left: 40px;
+				float: left;
+				font-size: 13px;
+				font-weight: normal;
+			}
+		&:hover{
+			width: 120px;
+			background-position: left; 
+			background-repeat: no-repeat;
+			cursor: pointer;
+			transition: .5s;
+			> div{
+				opacity: 1;
+				transition: .5s;
+			}
+		}
+		@media (max-width: @screen-gcard-adap-width) {
+			position: unset;
+			margin-right: 20px;
+			float: left;
+		}
+	}
+
+	&__list-hc{
+		margin-bottom: 40px;
+	}
+
+        
+        &__note {
+            height: 100px;
+            overflow: hidden;
+                p{
+                        margin: 0;
+                }
+        }
+
+        &__showMore {
+                color: #000;
+                text-decoration: underline;
+                cursor: pointer;
+        }
+
+        
+        &__note-full {
+            height: auto;
+        }
+
+        &__content-info {
+            display: flex;
+            width: 80%;
+                        @media (max-width: @screen-gcard-adap-width) {
+				width: 100%;
+			}
+                        @media (max-width: @screen-xs-min) {
+                                display: block;
+                        }
+        }
+}

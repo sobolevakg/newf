@@ -1,0 +1,58 @@
+@import "mixins";
+
+@colmask: b-colmask;
+@colmask_lc_width: 320;
+@colmask_gap_width: 10;
+
+.@{colmask} {
+  position: relative;
+  clear: both;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  .cf();
+
+  &__colright {
+    float: left;
+    width: 200%;
+    position: relative;
+    left: ~"@{colmask_lc_width}px";
+    background: #fff;
+  }
+  &__col1Wrap {
+    float: right;
+    width: 50%;
+    position: relative;
+    right: ~"@{colmask_lc_width}px";
+    padding-bottom: 1em;
+  }
+
+  &__col1 {
+    margin: 0 15px 0 calc(@colmask_lc_width+@colmask_gap_width)px;
+    position: relative;
+    right: 100%;
+    overflow: hidden;
+  }
+  &__col2 {
+    float: left;
+    width: 170px;
+    position: relative;
+    right: "@{colmask_lc_width}-@{colmask_gap_width}px";
+  }
+}
+
+
+.b-colmask.lc-320 {
+  .@{colmask}__colright {
+    left: 320px;
+  }
+  .@{colmask}__col1Wrap {
+    right: 320px;
+  }
+  .@{colmask}__col1 {
+  }
+  .@{colmask}__col2 {
+  }
+}
+
+

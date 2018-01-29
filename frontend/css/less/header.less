@@ -1,0 +1,151 @@
+header {
+    width: 100%;
+    //min-height: 455px;
+    background-image: url(/i/bg.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    padding-bottom: 55px;
+    //padding: 36px 80px 55px 80px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: @color_green;
+        }
+    }
+}
+
+.b-header-searchform {
+    padding-top: 40px;
+}
+
+.b-header-panel {
+    padding: 36px 80px 0 80px;
+    > .row {
+        > div {
+            padding-top: 13px;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        padding: 36px 40px 0 40px;
+    }
+    @media (max-width: 535px) {
+        padding: 36px 20px 0 20px;
+    }
+}
+
+.b-headlinks {
+    margin-top: -6px;
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                display: inline-block;
+                padding: 6px 5px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &.active {
+                a {
+                    padding: 6px 15px;
+                    border-radius: 13px;
+                    background-color: @color_green;
+                    color: black;
+                }
+            }
+            @media (max-width: 1200px) {
+                margin-right: 15px;
+            }
+        }
+    }
+    @media (max-width: 1345px) {
+        text-align: center;
+    }
+}
+
+.b-header-filter-button {
+}
+
+.b-link {
+    display: inline-block;
+    border: 1px solid @color_green_dirty;
+    .border-radius(20px);
+    padding: 7px 20px;
+    margin-top: -7px;
+    text-align: center;
+    color: white;
+    font-size: @font_base_size - 1px;
+    &:hover {
+        color: @color_green;
+    }
+}
+
+.b-link-user {
+    display: inline-block;
+    margin-top: -5px;
+    padding: 5px 0 5px 38px;
+    background: url(/i/userpic.png) 0 center no-repeat;
+
+    @media (max-width: 545px) {
+        span {
+            display: none;
+        }
+
+        width: 40px;
+        height: 24px;
+    }
+}
+
+.b-btn-search {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/i/search.png) center center no-repeat;
+}
+
+.b-header-title {
+    margin: 80px 0 40px 0;
+}
+
+.b-btn {
+    display: inline-block;
+    background-color: @color_green;
+    color: black;
+    text-align: center;
+    padding: 15px 30px;
+    .border-radius(50px);
+}
+
+.b-menu-btn {
+    display: inline-block;
+    width: 32px;
+    cursor: pointer;
+    > div {
+        height: 9px;
+        border-top: 1px solid @color_green;
+        &:last-child {
+            border-bottom: 1px solid @color_green;
+        }
+    }
+}
+
+.b-logo {
+    display: inline-block;
+    img {
+        @media (max-width: 535px) {
+            margin-top: 5px;
+            width: 150px;
+        }
+    }
+}
+
+.b-header-min{
+	background: #2c2c2c; 
+}

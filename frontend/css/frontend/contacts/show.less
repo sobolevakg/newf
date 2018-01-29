@@ -1,0 +1,102 @@
+@contacts: b-contacts;
+
+.@{contacts} {
+
+&__container{
+    @media (max-width: @screen-gcard-adap-width) {
+        .b-journal__menu{
+            display: none;
+        }
+    }
+}
+
+&__content{
+    width: 80%;
+    margin: 0 auto;
+    @media (max-width: @screen-gcard-adap-width) {
+        width: 90%;
+    }
+}
+
+&__title{
+    border-bottom: 1px solid #cecece;
+    padding: 15px;
+    h1{
+        color: #000;
+    }
+
+    @media (max-width: @screen-xs-min) {
+        padding:unset;
+        h1{
+            text-align: left;
+            font-size: 16px;
+        }
+    }
+}
+
+&__block{
+    width: 50%;
+    float: left;
+    padding-bottom: 25px;
+    line-height: 30px;
+    @media (max-width: @screen-xs-min) {
+        width: 100%;
+    }
+}
+
+&__block-container{    
+    border-bottom: 1px solid #cecece;
+    margin-bottom: 35px;
+    float: left;
+    width: 100%;
+}
+
+&__clear{
+    clear: both;
+}
+
+&__caption{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+&__contact{
+    color: @color-green;
+    font-weight: bold;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+&__image-advertising{
+    background: url(/i/reclam.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+}
+
+&__image-work{
+    background: url(/i/qbaza.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+}
+
+&__image-mail{
+    background: url(/i/corresp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+}
+
+&__image-editor{
+    background: url(/i/redact.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+}
+
+}
